@@ -1,0 +1,215 @@
+body {
+    background-color: #121212;
+}
+
+.container-fluid{
+    padding-top: 50px;
+    background-color: #121212;
+    height: 100vw;
+}
+#wrapperInside{
+    max-width: 1500px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+#leftForm{
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    margin: 10px;
+}
+#resultsContainer{
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+label{
+    color: #CDCDCD;
+}
+
+#resultHeader{
+    color: #CDCDCD;
+    font-size: 24px;
+    justify-content: center;
+}
+#resultSubHeader{
+    color: #CDCDCD;
+    font-size: 16px;
+    justify-content: center;
+}
+
+#inputHeader{
+    color: #CDCDCD;
+    font-size: 24px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#resultCable{
+    color: #03DAC5;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0;
+    line-height: 1;
+    
+    
+}
+#resultCableUnit{
+    color: #FF4181;
+    font-size: 18px;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+#progressBar{
+    height: 25px;
+    margin-bottom: 0px;
+    padding-left: 0;
+    line-height: 1;
+}
+
+#capacityLow {
+    color: #CDCDCD;
+    text-align: right;
+    padding-right: 0;
+    margin-bottom: 0px;
+}
+
+#capacityHigh{
+    color: #CDCDCD;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 0px;
+}
+#barContainer{
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-bottom: 0px;
+    
+}
+
+.resultValuesHead{
+    font-size: 16px;
+    justify-content: center;
+}
+
+.resultValues{
+    color: #BB86FC;
+    justify-content: center;
+}
+#ampacityRange{
+    color: #CDCDCD;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+
+#num1{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#powerUnitSelect{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#PhaseSwitch {
+    text-align: center;
+  }
+
+  .phase{
+    color: #03DAC5;
+    background-color: #03DAC5;
+  }
+
+  #singlephase.btn, #threephase.btn {
+    border-color: #424242; /* Dark grey border */
+    color: #424242; /* Dark grey text to indicate non-selected state */
+    background-color: transparent; /* Transparent background to fit the dark theme */
+    margin-bottom: 0px;
+  }
+  
+  #inputSinglePhase:checked + #singlephase.btn,
+  #inputThreePhase:checked + #threephase.btn {
+    background-color: #2196F3; /* Blue color for selected state */
+    border-color: #2196F3;
+    color: #FFFFFF; /* White text for readability on dark background */
+  }
+  
+
+  .green-highlight {
+    background-color:  #00A67D !important;
+}
+
+.scrollable-table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    display: block; /* Ensurses the div behaves as a block element */
+}
+
+
+.table-wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block; /* optional, to handle horizontal scrolling */
+}
+
+.tableFixHead          { overflow: auto; height: 100px; }
+.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }
+.scrollable-table-container {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .scrollable-table-container::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  .scrollable-table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    border: 3px solid #000;
+  }
+  
+  .scrollable-table-container::-webkit-scrollbar-track {
+    background-color: #000;
+  }
+  
+  /* For Firefox */
+  .scrollable-table-container {
+    scrollbar-color: rgba(255, 255, 255, 0.2) #000;
+  }
+
+  #chartContain {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container-fluid"  id="wrapper">
+    <div class="container-fluid"  id="wrapperInside">
+        <div class="row">
+            <div class="col-md-7" id="leftForm">
+                <form>
+                    <div class="row" id="inputHeader">Input Values🧮</div>
+                    <div class="row">
+                        <div class="col-md-5 form-group">
+                            <label for="num1">Load Power:</label>
+                            <div class="d-flex"> <!-- Flexbox container -->
+                                <input type="number" id="num1" class="form-control" placeholder="Enter the first number" value="15">
+                                <select id="powerUnitSelect" class="form-select" aria-label="termRatingSelect">
+                                    <option value="A" selected>Amps</option>
+                                    <option value="W">Watts</option>
+                                    <option value="KW">KiloWatts</option>
+                                    <option value="VA">Volt-Amps</option>                               
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="VoltageSelect">Voltage:</label>
+                            <select id="VoltageSelect" class="form-select" aria-label="VoltageSelect">
+                                <option value="120" selected>120</option>
+                                <option value="208">208</option>
+                                <option value="277">277</option>
+                                <option value="480">480</option>                                
+                            </select>
+                        </div>
+                        <div class="col-md-4 form-group d-flex align-items-end"> <!-- Flexbox container -->
+                            <div class="col-md-6">
+                                <input type="radio" class="btn-check" name="options-base" id="inputSinglePhase" autocomplete="off" checked="">
+                                <label class="btn" id="singlephase" for="inputSinglePhase">1 Phase</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" class="btn-check" name="options-base" id="inputThreePhase" autocomplete="off">
+                                <label class="btn" id="threephase" for="inputThreePhase">3 Phase</label>
+                            </div>
+                        </div>
+                          <div class="row">Row2</div>
+                        <div class="col-md-4 form-group">
+                            <label for="termRatingSelect">Termination Temp:</label>
+                            <select id="termRatingSelect" class="form-select" aria-label="termRatingSelect">
+                                <option value="60" selected>60</option>
+                                <option value="75">75</option>
+                                <option value="90">90</option>                               
+                            </select>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label for="lengthInput">Circuit Length</label>
+                            <input type="number" id="lengthInput" class="form-control" placeholder="Enter the first number" value="50">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label for="maxVoltageDrop">Max Voltage Drop</label>
+                            <input type="number" id="maxVoltageDrop" class="form-control" placeholder="Enter the first number" value="3">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!--RESULTS🧮------------------------>
+            <div class="col-md-4" id="resultsContainer">
+                <div class="row" id="resultHeader">Results🔌</div>
+                <div class="row" id="resultCable">#12</div>
+                <div class="row" id="resultCableUnit"></div>
+                <div class="row" id="resultCableUnit2">
+                    <div class="col-md-2 form-group" id="capacityLow">
+                        15
+                    </div>
+                    <div class="col-md-8 form-group" id="barContainer">
+                        <div class="progress" role="progressbar" id="progressBar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >
+                            <div class="progress-bar bg-success" style="width: 65%">65%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 form-group" id="capacityHigh">
+                        15
+                    </div>
+                </div>
+                <div class="row" id="ampacityRange">Ampacity Range</div>
+
+                
+                <!--RESULTS-Load🧮------------------------>
+                <div class="row" id="resultSubHeader">Load Info⚡</div>
+                <div class="row" id="resultSubHeader">
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">Voltage</div>
+                    <div class="row resultValues" id="resultsVoltage">120</div>
+                </div>
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">Amps</div>
+                    <div class="row resultValues" id="resultsAmps">120</div>
+                </div>
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">Power</div>
+                    <div class="row resultValues" id="resultsPower">120</div>
+                </div>
+                </div>
+                <!--RESULTS-Voltage Drop🧮------------------------>
+                <div class="row" id="resultSubHeader">Voltage Drop</div>
+                <div class="row" id="resultSubHeader">
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">Voltage Drop %</div>
+                    <div class="row resultValues" id="resultsVoltageDropPercent">120</div>
+                </div>
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">End Voltage</div>
+                    <div class="row resultValues" id="resultsVoltageDropVoltage">120</div>
+                </div>
+                <div class="col-sm-4" >
+                    <div class="row resultValuesHead">Cable Upsized</div>
+                    <div class="row resultValues" id="resultsVoltageDropCable">120</div>
+                </div>
+                </div>
+                
+                
+            </div>
+      
+            <div class="col-lg-6" >
+                <div class="row" id="resultSubHeader">Ampacity Table Results</div>
+                <div class="scrollable-table-container">
+                    <table class="table table-dark table-hover text-center tableFixHead" id="cableTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Wire Size</th>
+                                <th scope="col">Max Amps 60°C</th>
+                                <th scope="col">Max Amps 75°C</th>
+                                <th scope="col">Max Amps 90°C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6" >
+                <div class="row" id="resultSubHeader">Voltage Drop Results</div>
+                <div class="container" id="chartContain">
+                    <canvas id="myChart" ></canvas>
+                  </div>         
+                  <div class="row" id="resultSubHeader">Voltage Drop %</div>
+                  <div class="container2" id="chartContain">
+                      <canvas id="voltageDropPercentChart" ></canvas>
+                    </div>              
+            </div>
+            
+    </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js"></script>.
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.0.2/chartjs-plugin-annotation.min.js"></script>
+<script src="calculator.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

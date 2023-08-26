@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Calculator</title>
+    <link href="bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <input type="text" id="num1" class="form-control" placeholder="First Number">
+                <input type="text" id="num2" class="form-control mt-2" placeholder="Second Number">
+
+                <button id="add" class="btn btn-primary mt-2">+</button>
+                <button id="subtract" class="btn btn-primary mt-2">-</button>
+                <button id="multiply" class="btn btn-primary mt-2">*</button>
+                <button id="divide" class="btn btn-primary mt-2">/</button>
+
+                <p id="result" class="mt-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
